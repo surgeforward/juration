@@ -146,7 +146,8 @@
       }
     }
     
-    if (!hasMatch && string.trim() != '') return parse(string + opts.defaultUnit, opts);
+
+    if (!hasMatch && !isNaN(string) && string.trim() != '') return parse(string + opts.defaultUnit, opts);
     
     var sum = 0,
         numbers = string
